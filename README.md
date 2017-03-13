@@ -18,7 +18,7 @@ Or register in code before initializing the Orleans Silo:
 var logger = new Serilog.LoggerConfiguration()
     .WriteTo.LiterateConsole()
     .CreateLogger();
-var serilogConsumer = new SerilogTelemetryConsumer(logger);
+var serilogConsumer = new SerilogConsumer(logger);
 
 LogManager.LogConsumers.Add(serilogConsumer);
 LogManager.TelemetryConsumers.Add(serilogConsumer);
